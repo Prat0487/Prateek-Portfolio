@@ -42,7 +42,10 @@
       },
       { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
     );
-    revealEls.forEach((el) => io.observe(el));
+    revealEls.forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index % 4, 3) * 80}ms`;
+      io.observe(el);
+    });
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }

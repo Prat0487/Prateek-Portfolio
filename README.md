@@ -10,6 +10,8 @@ Positioned for high-impact freelance and contract work across the **USA** and **
 
 Static HTML / CSS / JS — deploy with Netlify (`netlify.toml` included). Project: `prateek-devops-portfolio` (team `prat0487`).
 
+Homepage leads with three production case studies (AIRBUS, IBM, GlobalLogic), open reference repos, engagement shapes, and contact CTAs.
+
 ```bash
 npx --yes serve .
 # or
