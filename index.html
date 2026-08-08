@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Prateek Rastogi — Platform & DevOps Engineer. High-impact cloud platforms, CI/CD, and reliability for teams across the USA and Europe." />
+  <meta name="description" content="Prateek Rastogi — Lead DevOps & Platform Engineer. Kubernetes, CI/CD, and cloud reliability for teams across the USA and Europe." />
   <meta name="theme-color" content="#0b1520" />
   <meta property="og:title" content="Prateek Rastogi · Platform & DevOps" />
-  <meta property="og:description" content="Freelance Platform & DevOps engineer for high-impact work across the USA and Europe." />
+  <meta property="og:description" content="Freelance Platform & DevOps engineer for high-impact work across the USA and Europe. Kubernetes, CI/CD, observability." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prateek-devops-portfolio.netlify.app/" />
+  <meta property="og:image" content="https://prateek-devops-portfolio.netlify.app/assets/portrait.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Prateek Rastogi · Platform & DevOps" />
+  <meta name="twitter:description" content="Platform, CI/CD, and reliability for USA & Europe teams." />
+  <meta name="twitter:image" content="https://prateek-devops-portfolio.netlify.app/assets/portrait.png" />
+  <link rel="canonical" href="https://prateek-devops-portfolio.netlify.app/" />
   <title>Prateek Rastogi · Platform & DevOps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +34,7 @@
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#experience">Experience</a>
-      <a href="#about">About</a>
+      <a href="#engage">Engage</a>
       <a class="nav-cta" href="#contact">Start a project</a>
     </nav>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
@@ -40,7 +47,7 @@
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#experience">Experience</a>
-    <a href="#about">About</a>
+    <a href="#engage">Engage</a>
     <a href="#contact">Start a project</a>
   </div>
 
@@ -58,12 +65,12 @@
         <p class="hero-brand" id="hero-brand">Prateek Rastogi</p>
         <h1 class="hero-title">Platform &amp; DevOps for teams that ship</h1>
         <p class="hero-lede">
-          Lead DevOps &amp; Cloud Engineer with 7+ years building multi-cloud CI/CD, Kubernetes, and observability —
-          available for high-impact freelance engagements across the USA and Europe.
+          Lead DevOps &amp; Cloud Engineer with 7+ years on enterprise Kubernetes, CI/CD, and observability —
+          available for high-impact freelance work across the USA and Europe.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Discuss a project</a>
-          <a class="btn btn-ghost" href="#work">View selected work</a>
+          <a class="btn btn-ghost" href="#work">View case studies</a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -72,122 +79,165 @@
       </div>
     </section>
 
-    <section class="section trust" aria-label="Focus markets">
+    <section class="section trust" aria-label="Organizations">
       <p class="trust-line">
-        Open for contract &amp; freelance · Remote-first · <strong>USA</strong> &amp; <strong>Europe</strong> time zones
+        Production platforms at
+        <strong>AIRBUS</strong> · <strong>IBM</strong> · <strong>GlobalLogic</strong> · <strong>NTT DATA</strong>
       </p>
     </section>
 
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="section-intro">
         <p class="eyebrow">Selected work</p>
-        <h2 id="work-title">Systems that move product forward</h2>
-        <p class="section-copy">Production-minded builds spanning cloud platforms, CI/CD, and product engineering.</p>
+        <h2 id="work-title">Case studies from production systems</h2>
+        <p class="section-copy">
+          Three platform problems teams hire for — migrations, release safety, and multi-cloud foundations.
+          Outcomes use real scope from engagements; no invented percentages.
+        </p>
       </div>
 
-      <article class="feature-work" data-reveal>
-        <div class="feature-meta">
-          <p class="eyebrow">Flagship</p>
-          <h3>AWS EKS CI/CD platform</h3>
-          <p>
-            End-to-end delivery path for a FastAPI service: Terraform for EKS/ECR/VPC, GitHub Actions with
-            Trivy scanning, Helm releases, and post-deploy smoke checks.
-          </p>
-          <ul class="tag-list">
-            <li>Terraform</li>
-            <li>EKS</li>
-            <li>Helm</li>
-            <li>GitHub Actions</li>
-            <li>FastAPI</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/CICD-Demo" target="_blank" rel="noopener">View on GitHub</a>
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <p class="eyebrow">01 · AIRBUS</p>
+          <h3>OpenShift → EKS and observability at microservice scale</h3>
         </div>
-        <div class="feature-visual" aria-hidden="true">
-          <div class="terminal">
-            <div class="terminal-bar"><span></span><span></span><span></span></div>
-            <pre><code>▶ ci: test · lint · trivy
-▶ build → push ECR :$SHA
-▶ helm upgrade python-demo
-▶ smoke: /health → 200</code></pre>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Problem</h4>
+            <p>
+              Container workloads needed a clearer AWS path — IaC-managed EKS/ECS, serverless event flows,
+              and signals that operators could trust across a large estate.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>
+              Terraform/CloudFormation for AWS foundations; Docker/Jenkins/Artifactory/ECR delivery;
+              OpenShift → EKS migrations; Lambda, ECS Fargate, EventBridge, and Step Functions for event-driven paths;
+              Prometheus, Grafana, Loki, ELK, Splunk, Datadog, and New Relic wired for the runtime.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Outcome</h4>
+            <ul class="outcome-list">
+              <li>Automation spanning <strong>100+ microservices</strong></li>
+              <li>Production container path on <strong>EKS/ECS</strong> with IaC reviewability</li>
+              <li>Unified observability stack for day-2 operations</li>
+            </ul>
           </div>
         </div>
+        <ul class="tag-list">
+          <li>EKS</li>
+          <li>Terraform</li>
+          <li>Serverless</li>
+          <li>Observability</li>
+        </ul>
       </article>
 
-      <div class="work-grid">
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">Infrastructure</p>
-          <h3>AWS infrastructure as code</h3>
-          <p>Reusable Terraform modules and environment layouts for consistent, reviewable cloud provisioning.</p>
-          <ul class="tag-list">
-            <li>Terraform</li>
-            <li>AWS</li>
-            <li>IaC</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/aws-infra" target="_blank" rel="noopener">Repository</a>
-        </article>
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <p class="eyebrow">02 · IBM India (GBS)</p>
+          <h3>Progressive delivery on EKS without blind releases</h3>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Problem</h4>
+            <p>
+              Platform teams needed safer production rollouts — blue-green and canary paths, not
+              “deploy and hope” — with messaging and on-call ownership in the loop.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>
+              EKS platforms with Terraform and GitLab CI; Harness/Spinnaker for blue-green and canary releases;
+              Kafka/RabbitMQ in the data path; Splunk/ELK for incident signal; 24×7 on-call for production ownership.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Outcome</h4>
+            <ul class="outcome-list">
+              <li><strong>Blue-green &amp; canary</strong> release paths in production</li>
+              <li>Repeatable EKS + Terraform platform foundation</li>
+              <li>On-call ownership tied to real delivery, not handoff theater</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="tag-list">
+          <li>EKS</li>
+          <li>GitLab CI</li>
+          <li>Harness</li>
+          <li>Spinnaker</li>
+        </ul>
+      </article>
 
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">Product</p>
-          <h3>Cenovia International</h3>
-          <p>Responsive commerce storefront with product search, filtering, and collection flows for premium apparel.</p>
-          <ul class="tag-list">
-            <li>JavaScript</li>
-            <li>Netlify</li>
-            <li>UX</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/Cenovia-International" target="_blank" rel="noopener">Repository</a>
-        </article>
-
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">AI product</p>
-          <h3>StockSage</h3>
-          <p>Next.js application with Genkit AI flows for market insight experiences — typed, component-driven UI.</p>
-          <ul class="tag-list">
-            <li>TypeScript</li>
-            <li>Next.js</li>
-            <li>Genkit</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/StockSage" target="_blank" rel="noopener">Repository</a>
-        </article>
-
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">AI product</p>
-          <h3>Foodie-Fast</h3>
-          <p>Food discovery experience built on Next.js and Google AI tooling for rapid product iteration.</p>
-          <ul class="tag-list">
-            <li>TypeScript</li>
-            <li>Next.js</li>
-            <li>AI</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/Foodie-Fast" target="_blank" rel="noopener">Repository</a>
-        </article>
-
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">Content</p>
-          <h3>Minimalist Blogs</h3>
-          <p>Clean blogging surface with modern React patterns — focused reading UX and maintainable structure.</p>
-          <ul class="tag-list">
-            <li>TypeScript</li>
-            <li>Next.js</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/Minimalist-Blogs" target="_blank" rel="noopener">Repository</a>
-        </article>
-
-        <article class="work-item" data-reveal>
-          <p class="eyebrow">Automation</p>
-          <h3>Jenkins delivery POC</h3>
-          <p>Sample Node.js app wired for local Jenkins pipeline deployment — CI fundamentals made concrete.</p>
-          <ul class="tag-list">
-            <li>Jenkins</li>
-            <li>Node.js</li>
-            <li>CI</li>
-          </ul>
-          <a class="text-link" href="https://github.com/Prat0487/sample-nodejs-app" target="_blank" rel="noopener">Repository</a>
-        </article>
-      </div>
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <p class="eyebrow">03 · GlobalLogic (Hitachi)</p>
+          <h3>GKE golden path with ingress and hardened cloud identity</h3>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Problem</h4>
+            <p>
+              Product delivery on GCP needed a packaged cluster path — Helm charts, ingress, CI/CD,
+              and secrets/IAM that teams could reuse without reinventing each sprint.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>
+              GKE with Helm packaging and Kong Ingress; GitLab CI / Cloud Build into Artifact Registry;
+              Harness CD; Pub/Sub; Secret Manager and IAM hardening; ELK/Splunk/Cloud Monitoring for ops visibility.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Outcome</h4>
+            <ul class="outcome-list">
+              <li>Reusable <strong>GKE + Helm</strong> delivery path</li>
+              <li>Ingress and registry flow teams could adopt</li>
+              <li>Hardened secrets/IAM as default, not afterthought</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="tag-list">
+          <li>GKE</li>
+          <li>Helm</li>
+          <li>Kong</li>
+          <li>GCP</li>
+        </ul>
+      </article>
     </section>
 
-    <section class="section section-alt" id="services" aria-labelledby="services-title">
+    <section class="section section-alt" id="labs" aria-labelledby="labs-title">
+      <div class="section-intro">
+        <p class="eyebrow">Open work</p>
+        <h2 id="labs-title">Reference builds you can inspect</h2>
+        <p class="section-copy">Public repos that show how I structure platforms — secondary to the production case studies above.</p>
+      </div>
+      <ul class="labs-list">
+        <li data-reveal>
+          <a href="https://github.com/Prat0487/CICD-Demo" target="_blank" rel="noopener">
+            <span class="labs-name">AWS EKS CI/CD demo</span>
+            <span class="labs-desc">Terraform · Helm · GitHub Actions · Trivy · FastAPI</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://github.com/Prat0487/aws-infra" target="_blank" rel="noopener">
+            <span class="labs-name">AWS infrastructure as code</span>
+            <span class="labs-desc">Reusable Terraform modules and environment layouts</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://github.com/Prat0487/sample-nodejs-app" target="_blank" rel="noopener">
+            <span class="labs-name">Jenkins delivery POC</span>
+            <span class="labs-desc">Node.js sample wired for local Jenkins pipelines</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="section-intro">
         <p class="eyebrow">How I help</p>
         <h2 id="services-title">Engagements built for outcomes</h2>
@@ -213,7 +263,7 @@
       </div>
     </section>
 
-    <section class="section" id="experience" aria-labelledby="experience-title">
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
       <div class="section-intro">
         <p class="eyebrow">Experience</p>
         <h2 id="experience-title">Seven-plus years in production systems</h2>
@@ -258,7 +308,7 @@
       </ol>
     </section>
 
-    <section class="section section-alt" id="stack" aria-labelledby="stack-title">
+    <section class="section" id="stack" aria-labelledby="stack-title">
       <div class="section-intro">
         <p class="eyebrow">Toolkit</p>
         <h2 id="stack-title">Depth where it matters</h2>
@@ -292,7 +342,7 @@
       </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-title">
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
       <div class="about-layout">
         <div class="about-copy" data-reveal>
           <p class="eyebrow">About</p>
@@ -329,27 +379,55 @@
       </div>
     </section>
 
+    <section class="section" id="engage" aria-labelledby="engage-title">
+      <div class="section-intro">
+        <p class="eyebrow">How we work</p>
+        <h2 id="engage-title">Engagement shapes</h2>
+        <p class="section-copy">Pick a starting shape — we’ll refine scope after a short discovery call.</p>
+      </div>
+      <div class="engage-grid">
+        <article data-reveal>
+          <p class="eyebrow">1–2 weeks</p>
+          <h3>Platform audit</h3>
+          <p>CI/CD, Kubernetes, IaC, and observability review with a prioritized fix list and risk map.</p>
+        </article>
+        <article data-reveal>
+          <p class="eyebrow">4–8 weeks</p>
+          <h3>Delivery rebuild</h3>
+          <p>Stand up or harden a golden path — pipelines, Helm/IaC, smoke gates, and runbooks your team owns.</p>
+        </article>
+        <article data-reveal>
+          <p class="eyebrow">Ongoing</p>
+          <h3>Embedded platform lead</h3>
+          <p>Part-time or full-time contract leadership for migrations, release trains, and reliability turnarounds.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel" data-reveal>
         <p class="eyebrow">Next step</p>
         <h2 id="contact-title">Tell me what needs to ship</h2>
         <p>
           Migrations, platform greenfield, CI/CD rebuilds, or reliability turnarounds —
-          share context and timelines. I’ll respond with a clear engagement shape.
+          share context, constraints, and timeline. I’ll reply with a clear engagement shape.
         </p>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:rastogiprateek36@gmail.com">rastogiprateek36@gmail.com</a>
+          <a class="btn btn-primary" href="mailto:rastogiprateek36@gmail.com?subject=Platform%20%2F%20DevOps%20engagement">Email to start</a>
           <a class="btn btn-ghost" href="https://linkedin.com/in/prateekdevops" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/Prat0487" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <p class="contact-note">Prefer phone? <a href="tel:+918307282810">+91 83072 82810</a></p>
+        <p class="contact-note">
+          Prefer phone? <a href="tel:+918307282810">+91 83072 82810</a>
+          · Or write <a href="mailto:rastogiprateek36@gmail.com">rastogiprateek36@gmail.com</a>
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© <span data-year></span> Prateek Rastogi</p>
-    <p>Platform &amp; DevOps · USA &amp; Europe · Built for Netlify</p>
+    <p>Platform &amp; DevOps · USA &amp; Europe · <a href="https://prateek-devops-portfolio.netlify.app/">Live site</a></p>
   </footer>
 
   <script src="js/main.js" defer></script>
