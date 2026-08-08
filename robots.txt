@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prateek-portfolio.netlify.app/sitemap.xml
+Sitemap: https://prateek-devops-portfolio.netlify.app/sitemap.xml
