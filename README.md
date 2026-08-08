@@ -6,7 +6,9 @@ Positioned for high-impact freelance and contract work across the **USA** and **
 
 ## Live site
 
-Static HTML / CSS / JS — deploy with Netlify (`netlify.toml` included).
+**https://prateek-devops-portfolio.netlify.app/**
+
+Static HTML / CSS / JS — deploy with Netlify (`netlify.toml` included). Project: `prateek-devops-portfolio` (team `prat0487`).
 
 ```bash
 npx --yes serve .
