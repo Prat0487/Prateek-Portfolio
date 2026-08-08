@@ -489,30 +489,71 @@ a:hover {
   font-size: 1.05rem;
 }
 
-.feature-work {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
-  align-items: center;
+.case {
+  padding: clamp(1.75rem, 4vw, 2.5rem) 0;
+  border-top: 1px solid var(--line);
 }
 
-.feature-meta h3,
-.work-item h3,
+.case:last-of-type {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.5rem;
+}
+
+.case-header h3,
 .services h3,
-.stack-groups h3 {
+.stack-groups h3,
+.engage-grid h3 {
   margin: 0 0 0.65rem;
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
   font-weight: 650;
   letter-spacing: -0.02em;
 }
 
-.feature-meta p,
-.work-item p,
+.case-header {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-body {
+  display: grid;
+  gap: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-block h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.case-block p,
 .services p,
 .timeline p,
-.about-copy p {
+.about-copy p,
+.engage-grid p,
+.labs-desc {
   color: var(--muted);
+}
+
+.case-block p {
+  margin: 0;
+}
+
+.outcome-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.outcome-list strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .tag-list {
@@ -521,7 +562,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.45rem;
   padding: 0;
-  margin: 1.1rem 0 1.25rem;
+  margin: 1.1rem 0 0;
 }
 
 .tag-list li {
@@ -544,51 +585,44 @@ a:hover {
   color: var(--ink);
 }
 
-.feature-visual {
-  min-height: 16rem;
-}
-
-.terminal {
-  background: linear-gradient(160deg, #132030, #0b1520);
-  color: #d7e8ef;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 1px solid rgba(126, 182, 201, 0.2);
-  box-shadow: 0 24px 60px rgba(11, 21, 32, 0.18);
-}
-
-.terminal-bar {
-  display: flex;
-  gap: 0.4rem;
-  padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.terminal-bar span {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: rgba(247, 250, 252, 0.25);
-}
-
-.terminal pre {
+.labs-list {
+  list-style: none;
   margin: 0;
-  padding: 1.25rem 1.35rem 1.5rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  overflow-x: auto;
-}
-
-.work-grid {
+  padding: 0;
   display: grid;
-  gap: 1.75rem 2rem;
+  gap: 0;
 }
 
-.work-item {
-  padding-top: 1.25rem;
+.labs-list li {
   border-top: 1px solid var(--line);
+}
+
+.labs-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.labs-list a {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1.15rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s var(--ease);
+}
+
+.labs-list a:hover {
+  color: var(--accent-deep);
+}
+
+.labs-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.labs-desc {
+  font-size: 0.92rem;
 }
 
 .services {
@@ -599,6 +633,20 @@ a:hover {
 .services article {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--line);
+}
+
+.engage-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.engage-grid article {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.engage-grid h3 {
+  font-size: 1.45rem;
 }
 
 .timeline {
@@ -823,18 +871,24 @@ a:hover {
     display: none;
   }
 
-  .feature-work {
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 3rem;
-  }
-
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .case-body {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem 2rem;
   }
 
   .services {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 2.5rem;
+  }
+
+  .engage-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem;
+  }
+
+  .engage-grid article {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 
   .stack-groups {
@@ -854,10 +908,6 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .services {
     grid-template-columns: repeat(4, 1fr);
   }
